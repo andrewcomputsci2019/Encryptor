@@ -1,0 +1,118 @@
+.mainAnchor{
+    -fx-background-color: #1e1e1e ;
+    /*linear-gradient(to top right,#1e1e1e,#414141)*/
+}
+.dropDownPane{
+    -fx-border-color: gray;
+    -fx-border-width: 2;
+    -fx-border-radius: 6;
+    -fx-border-style: segments(4,4,4,5) line-cap round;
+}
+
+.Buttons{
+    -fx-border-radius: 8;
+    -fx-border-insets: 0 0 -2 0,0,1;
+}
+.PrimaryFill{
+    -fx-background-color: #A5DE37;
+}
+.SecondaryFill{
+    -fx-background-color: #1CAEEE;
+}
+.PrimaryFill:armed{
+    -fx-background-color: #476016;
+}
+.SecondaryFill:armed{
+    -fx-background-color: #11526b;
+}
+
+.Buttons:hover{
+    -fx-scale-y: 1.05;
+    -fx-cursor: HAND;
+}
+.Buttons:focused{
+    -fx-border-width: 1px;
+}
+
+.BackButton{
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-border-insets: 0 0 -2 0,0,1;
+    -fx-border-color: white;
+    -fx-background-color: rgba(0,0,0,0);
+}
+.BackButton:armed{
+    -fx-background-color: rgba(0,0,0,0.5);
+}
+.BackButton:focused{
+    -fx-border-color: #a9a9a9;
+}
+
+.EncButtons{
+    -fx-border-radius: 8;
+    -fx-border-insets: 0 0 -2 0,0,1;
+}
+.EncButtons:hover{
+    -fx-background-color: #acee3b;
+}
+.EncButtons:armed{
+    -fx-background-color: #8ab92c;
+}
+
+.NextButton-Enc{
+    -fx-border-radius: 5;
+    -fx-border-width: 2;
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-border-color: #A5DE37;
+}
+.NextButton-Enc:armed{
+    -fx-background-color: rgba(0,0,0,0.5);
+}
+
+.NextButtonDecrypt{
+    -fx-border-radius: 5;
+    -fx-border-width: 2;
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-border-color: #1CAEEE;
+}
+.NextButtonDecrypt:armed{
+    -fx-background-color: rgba(0,0,0,0.5);
+}
+.DecButton:hover{
+    -fx-background-color: #1fb8ff;
+}
+.DecButton:armed{
+    -fx-background-color: #1874a2;
+}
+.combo-box{
+    -fx-border-radius: 8;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+    -fx-background-radius: 8;
+}
+.combo-box .list-view{
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+}
+.combo-box .list-view .list-cell {
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+}
+.GreenSpinner.progress-indicator:indeterminate {
+    -fx-progress-color: #A5DE37 ;
+}
+.BlueSpinner.progress-indicator:indeterminate {
+    -fx-progress-color: #1CAEEE ;
+}
+
+.Enc-background{
+    -fx-background-color: #A5DE37;
+}
+.Enc-border{
+    -fx-border-color: #A5DE37;
+}
+.Dnc-background{
+    -fx-background-color: #1CAEEE;
+}
+.Dnc-border{
+    -fx-background-color: #1CAEEE;
+}
