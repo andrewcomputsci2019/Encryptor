@@ -18,11 +18,11 @@ package com.andrew.Encryptor.EncryptorService;/*
 import java.io.File;
 
 /**
+ * Class to be used to identify weather a file is supported by this program for encryption / decryption
  * @author Andrew Pegg {@literal <andrewcomputsci2019@gmail.com>}
- * @version 1.0
- * @Date: 07/12/2022
+ * @version 1.0 07/12/2022
  * @see Exception
- * Class to be used to idenfiy weather a file is supported by this program for encyrption / decryption
+ *
  */
 public class UnsupportedFileException extends Exception{
     public UnsupportedFileException(String message){

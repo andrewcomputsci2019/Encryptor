@@ -22,8 +22,7 @@ import java.util.Objects;
 
 /**
  * @author Andrew Pegg {@literal <andrewcomputsci2019@gmail.com>}
- * @version  1.0
- * @Date: 07/12/2022
+ * @version  1.0 07/12/2022
  */
 public class EncryptedFile {
     /**

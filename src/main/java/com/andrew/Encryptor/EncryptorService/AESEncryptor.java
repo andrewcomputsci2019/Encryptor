@@ -34,10 +34,9 @@ import java.util.Optional;
 
 
 /**
- * @author Andrew Pegg {@literal <andrewcomputsci2019@gmail.com>}
- * @version 1.0
- * @Date: 07/12/2022
  * AES encryptor service design to encrypt and decrypt files
+ * @author Andrew Pegg {@literal <andrewcomputsci2019@gmail.com>}
+ * @version 1.0 07/12/2022
  */
 public class AESEncryptor implements Encryptor {
     /**

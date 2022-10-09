@@ -20,8 +20,7 @@ import java.util.Base64;
 /**
  * Util wrapper for usage in different encryptor services
  * @author Andrew Pegg {@literal <andrewcomputsci2019@gmail.com>}
- * @version 1.00
- * @Date: 07/12/2022
+ * @version 1.00 07/12/2022
  */
 public class Utils {
     /**

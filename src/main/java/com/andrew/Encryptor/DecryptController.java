@@ -47,6 +47,8 @@ import java.util.ResourceBundle;
 
 /**
  * Controller of the Decrypt.fxml file
+ * @author andrew pegg
+ * @version 1.00 07/12/2022
  */
 public class DecryptController implements Initializable {
 
