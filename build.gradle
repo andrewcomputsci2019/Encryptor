@@ -24,8 +24,8 @@ tasks.withType(JavaCompile) {
 }
 
 application {
-    mainModule = 'com.andrew.UD'
-    mainClass = 'com.andrew.ud3.EncryptorApp'
+    mainModule = 'com.andrew.Encryptor'
+    mainClass = 'com.andrew.Encryptor.EncryptorApp'
 }
 
 javafx {
