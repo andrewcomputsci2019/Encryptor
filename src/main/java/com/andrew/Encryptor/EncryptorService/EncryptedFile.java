@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.Objects;
 
 /**
- * @author Andrew Pegg {@literal <andrewcomputsci2019@gmail.com>}
+ * @author Andrew Pegg
  * @version  1.0 07/12/2022
  */
 public class EncryptedFile {

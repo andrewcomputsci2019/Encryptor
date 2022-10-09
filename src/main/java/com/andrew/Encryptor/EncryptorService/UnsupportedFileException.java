@@ -19,7 +19,7 @@ import java.io.File;
 
 /**
  * Class to be used to identify weather a file is supported by this program for encryption / decryption
- * @author Andrew Pegg {@literal <andrewcomputsci2019@gmail.com>}
+ * @author Andrew Pegg
  * @version 1.0 07/12/2022
  * @see Exception
  *

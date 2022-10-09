@@ -35,7 +35,7 @@ import java.util.Optional;
 
 /**
  * AES encryptor service design to encrypt and decrypt files
- * @author Andrew Pegg {@literal <andrewcomputsci2019@gmail.com>}
+ * @author Andrew Pegg
  * @version 1.0 07/12/2022
  */
 public class AESEncryptor implements Encryptor {
