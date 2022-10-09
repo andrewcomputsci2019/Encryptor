@@ -1,4 +1,4 @@
-package com.andrew.ud3.EncryptorService;/*
+/*
  * Copyright (c) Andrew Pegg 2022.
  * All rights reversed
  *     This program is free software: you can redistribute it and/or modify
@@ -15,20 +15,12 @@ package com.andrew.ud3.EncryptorService;/*
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import java.io.File;
+package com.andrew.Encryptor;
 
 /**
- * @author Andrew Pegg {@literal <andrewcomputsci2019@gmail.com>}
- * @version 1.0
- * @Date: 07/12/2022
- * @see Exception
- * Class to be used to idenfiy weather a file is supported by this program for encyrption / decryption
+ * Functional interface to be used to implement ability for controllers to change scenes internally
  */
-public class UnsupportedFileException extends Exception{
-    public UnsupportedFileException(String message){
-        super(message);
-    }
-    public UnsupportedFileException(File file){
-        super(String.format("File: %s is not supported",file.getName()));
-    }
+@FunctionalInterface
+public interface DrawScene {
+    void drawScene();
 }

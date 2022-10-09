@@ -1,4 +1,4 @@
-package com.andrew.ud3.EncryptorService;/*
+package com.andrew.Encryptor.EncryptorService;/*
  * Copyright (c) Andrew Pegg 2022.
  * All rights reversed
  *     This program is free software: you can redistribute it and/or modify
@@ -16,10 +16,13 @@ package com.andrew.ud3.EncryptorService;/*
  */
 
 import javax.crypto.*;
-import javax.crypto.spec.GCMParameterSpec;
+import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.nio.channels.FileLock;
 import java.nio.channels.OverlappingFileLockException;
 import java.nio.charset.StandardCharsets;
@@ -83,7 +86,7 @@ public class AESEncryptor implements Encryptor {
     /**
      * The name of the encryption algorithm to be used
      */
-    private static final String ALGORITHM = "AES/GCM/NoPadding";
+    private static final String ALGORITHM = "AES/CBC/PKCS5Padding";
 
     /**
      * Private Constructor to prevent improper construction
@@ -269,7 +272,7 @@ public class AESEncryptor implements Encryptor {
         //get a cipher of AES GCM mode
         encryptor.cipher = Cipher.getInstance(ALGORITHM);
         //init cipher for encryption given above parameters
-        encryptor.cipher.init(Cipher.ENCRYPT_MODE, encryptor.secretKey, new GCMParameterSpec(T_LEN, encryptor.IV));
+        encryptor.cipher.init(Cipher.ENCRYPT_MODE, encryptor.secretKey, new IvParameterSpec(encryptor.IV));
         encryptor.PasswordEncryption = false;
         return encryptor;
     }
@@ -300,7 +303,7 @@ public class AESEncryptor implements Encryptor {
         random.nextBytes(encryptor.IV);
         encryptor.cipher = Cipher.getInstance(ALGORITHM);
         //this init the cipher to be able to encrypt files and such
-        encryptor.cipher.init(Cipher.ENCRYPT_MODE, encryptor.secretKey, new GCMParameterSpec(T_LEN, encryptor.IV));
+        encryptor.cipher.init(Cipher.ENCRYPT_MODE, encryptor.secretKey, new IvParameterSpec(encryptor.IV));
         //at this point a file can be encrypted
         encryptor.PasswordEncryption = true;
         return encryptor;
@@ -330,7 +333,7 @@ public class AESEncryptor implements Encryptor {
         encryptor.secretKey = new SecretKeySpec(factory.generateSecret(pwSpec).getEncoded(),"AES");
         //create AES cipher given IV and cryptographic Key
         encryptor.cipher = Cipher.getInstance(ALGORITHM);
-        encryptor.cipher.init(Cipher.DECRYPT_MODE, encryptor.secretKey, new GCMParameterSpec(T_LEN, encryptor.IV));
+        encryptor.cipher.init(Cipher.DECRYPT_MODE, encryptor.secretKey, new IvParameterSpec(encryptor.IV));
         return encryptor;
     }
 
@@ -350,7 +353,7 @@ public class AESEncryptor implements Encryptor {
         byte[] keyBytes = Utils.decodeBase64(key);
         encryptor.secretKey = new SecretKeySpec(keyBytes, "AES");
         encryptor.cipher = Cipher.getInstance(ALGORITHM);
-        encryptor.cipher.init(Cipher.DECRYPT_MODE, encryptor.secretKey, new GCMParameterSpec(T_LEN, encryptor.IV));
+        encryptor.cipher.init(Cipher.DECRYPT_MODE, encryptor.secretKey, new IvParameterSpec(encryptor.IV));
         return encryptor;
     }
 }

@@ -15,9 +15,9 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.andrew.ud3;
+package com.andrew.Encryptor;
 
-import com.andrew.ud3.EncryptorService.Utils;
+import com.andrew.Encryptor.EncryptorService.Utils;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;

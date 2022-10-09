@@ -1,4 +1,4 @@
-/*
+package com.andrew.Encryptor.EncryptorService;/*
  * Copyright (c) Andrew Pegg 2022.
  * All rights reversed
  *     This program is free software: you can redistribute it and/or modify
@@ -15,26 +15,20 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.andrew.ud3;
+import java.io.File;
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
-
-public class EncryptorApp extends Application {
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        AnchorPane pane = FXMLLoader.load(EncryptorApp.class.getResource("Main.fxml"));
-        Scene scene = new Scene(pane,800,600);
-        primaryStage.setTitle("Encryptor Application");
-        primaryStage.setScene(scene);
-        primaryStage.setResizable(false);
-        primaryStage.show();
+/**
+ * @author Andrew Pegg {@literal <andrewcomputsci2019@gmail.com>}
+ * @version 1.0
+ * @Date: 07/12/2022
+ * @see Exception
+ * Class to be used to idenfiy weather a file is supported by this program for encyrption / decryption
+ */
+public class UnsupportedFileException extends Exception{
+    public UnsupportedFileException(String message){
+        super(message);
     }
-
-    public static void main(String[] args) {
-        launch();
+    public UnsupportedFileException(File file){
+        super(String.format("File: %s is not supported",file.getName()));
     }
 }

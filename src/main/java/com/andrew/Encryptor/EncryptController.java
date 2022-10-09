@@ -15,9 +15,9 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.andrew.ud3;
+package com.andrew.Encryptor;
 //javafx and Encryptor services import
-import com.andrew.ud3.EncryptorService.*;
+import com.andrew.Encryptor.EncryptorService.*;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.concurrent.Task;

@@ -15,12 +15,26 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.andrew.ud3;
+package com.andrew.Encryptor;
 
-/**
- * Functional interface to be used to implement ability for controllers to change scenes internally
- */
-@FunctionalInterface
-public interface DrawScene {
-    void drawScene();
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
+public class EncryptorApp extends Application {
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        AnchorPane pane = FXMLLoader.load(EncryptorApp.class.getResource("Main.fxml"));
+        Scene scene = new Scene(pane,800,600);
+        primaryStage.setTitle("Encryptor Application");
+        primaryStage.setScene(scene);
+        primaryStage.setResizable(false);
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch();
+    }
 }

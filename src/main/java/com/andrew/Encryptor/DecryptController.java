@@ -15,9 +15,9 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.andrew.ud3;
+package com.andrew.Encryptor;
 
-import com.andrew.ud3.EncryptorService.*;
+import com.andrew.Encryptor.EncryptorService.*;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.concurrent.Task;
@@ -325,7 +325,7 @@ public class DecryptController implements Initializable {
                 changeScene(0);
         }));
         task.setOnSucceeded(e -> Platform.runLater(() -> handleFileSaving(task.getValue())));
-        Thread thread = new Thread(task::run);
+        Thread thread = new Thread(task);
         thread.start();
     }
     private void handleFileSaving(Path path){

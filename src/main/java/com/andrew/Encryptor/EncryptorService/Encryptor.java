@@ -1,4 +1,4 @@
-package com.andrew.ud3.EncryptorService;/*
+package com.andrew.Encryptor.EncryptorService;/*
  * Copyright (c) Andrew Pegg 2022.
  * All rights reversed
  *     This program is free software: you can redistribute it and/or modify
@@ -15,7 +15,6 @@ package com.andrew.ud3.EncryptorService;/*
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.security.GeneralSecurityException;
