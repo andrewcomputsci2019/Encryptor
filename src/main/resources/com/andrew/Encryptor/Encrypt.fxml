@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="mainAnchor" stylesheets="@Main.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <Label layoutX="348.0" layoutY="10.0" prefHeight="44.0" prefWidth="144.0" text="Encryptor" textFill="#757474" AnchorPane.leftAnchor="348.0" AnchorPane.rightAnchor="308.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="28.0" />
+         </font>
+         <padding>
+            <Insets top="4.0" />
+         </padding>
+      </Label>
+      <FontIcon iconColor="WHITE" iconLiteral="antf-lock" iconSize="27" layoutX="321.0" layoutY="35.0" wrappingWidth="12.0" />
+      <Pane fx:id="pane" layoutX="260.0" layoutY="200.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="281.0" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="260.0" AnchorPane.topAnchor="200.0">
+         <children>
+            <Button fx:id="chooseFileButton" layoutX="81.0" layoutY="52.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="119.0" text="Choose File">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="EncButtons" />
+                  <String fx:value="PrimaryFill" />
+               </styleClass>
+            </Button>
+            <Button fx:id="backButton" alignment="CENTER" layoutX="14.0" layoutY="118.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="80.0" styleClass="BackButton">
+               <graphic>
+                  <FontIcon fill="WHITE" iconLiteral="anto-arrow-left" iconSize="15" selectionFill="BLACK" wrappingWidth="30.0" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="nextButton" alignment="CENTER" disable="true" layoutX="187.0" layoutY="117.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="80.0" styleClass="NextButton-Enc">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <FontIcon iconColor="#a5de37" iconLiteral="anto-arrow-right" iconSize="15" />
+               </graphic>
+            </Button>
+            <Label fx:id="fileLabel" layoutX="81.0" layoutY="92.0" prefHeight="25.0" prefWidth="119.0" textFill="WHITE" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
