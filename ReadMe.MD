@@ -13,7 +13,7 @@ and specify the output directory for the encrypted or decrypted file.
 For a quicker process, you can simply drag and drop files, bypassing the file selection menu.
 ___
 ## Demo
-
+[![video](https://i.ytimg.com/vi/m10bxuacv2s/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH8CYAC0AWKAgwIABABGFggRyhyMA8=&amp;rs=AOn4CLDkyEzCKtLCF-3XKTMkTlk1g7rjLw)](https://www.youtube.com/watch?v=m10bxuacv2s)
 ___
 ## How to build and run
 The easiest way to build and run is
